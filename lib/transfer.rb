@@ -22,7 +22,7 @@ end
 
 def execute_transaction
 
-  if @receiver.valid? === false || @sender.valid? === false && @status != "pending"
+  if @receiver.valid? === false || @sender.valid? === false || @status != "pending"
      @status = "rejected"
     return "Transaction rejected. Please check your account balance."
   else
